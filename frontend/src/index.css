@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1a1625 0%, #2d1b69 50%, #4c1d95 100%);
+  min-height: 100vh;
+  font-weight: 400;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Elegant Purple & Gold Theme Variables */
+:root {
+  --primary-purple: #7c3aed;
+  --secondary-purple: #a855f7;
+  --deep-purple: #581c87;
+  --royal-purple: #4c1d95;
+  --light-purple: #f3e8ff;
+  --accent-gold: #f59e0b;
+  --light-gold: #fbbf24;
+  --dark-gold: #d97706;
+  --white: #ffffff;
+  --cream: #fefbf3;
+  --light-gray: #f8fafc;
+  --medium-gray: #e2e8f0;
+  --gray: #64748b;
+  --dark-gray: #334155;
+  --charcoal: #1e293b;
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+  --shadow-light: rgba(124, 58, 237, 0.1);
+  --shadow-medium: rgba(124, 58, 237, 0.2);
+  --shadow-heavy: rgba(0, 0, 0, 0.3);
+}

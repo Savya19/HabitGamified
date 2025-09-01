@@ -1,0 +1,161 @@
+.habit-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.habit-detail-header {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.back-button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.back-button:hover {
+    background: #5a6268;
+}
+
+.habit-info {
+    flex: 1;
+}
+
+.habit-info h1 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.habit-description {
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.habit-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.habit-category,
+.habit-difficulty,
+.habit-frequency {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.habit-category {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.habit-difficulty {
+    color: white;
+}
+
+.habit-frequency {
+    background: #007bff;
+    color: white;
+}
+
+.habit-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.complete-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.complete-button:hover:not(:disabled) {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+.complete-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.complete-button.completed {
+    background: #6c757d;
+}
+
+.habit-detail-content {
+    display: grid;
+    gap: 20px;
+}
+
+.habit-detail-loading,
+.habit-detail-error {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.habit-detail-error {
+    color: #dc3545;
+}
+
+.habit-detail-error .back-button {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .habit-detail {
+        padding: 15px;
+    }
+    
+    .habit-detail-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .habit-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .habit-meta {
+        gap: 8px;
+    }
+    
+    .habit-category,
+    .habit-difficulty,
+    .habit-frequency {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+    }
+    
+    .complete-button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,207 @@
+.notification-settings {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification-settings h2 {
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 8px;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    padding-left: 35px;
+}
+
+.setting-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.setting-label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.setting-label input:checked ~ .checkmark {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.setting-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.setting-label .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.setting-description {
+    margin: 8px 0 0 35px;
+    font-size: 14px;
+    color: #666;
+}
+
+.time-label,
+.timezone-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.time-input,
+.timezone-select {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.time-input:focus,
+.timezone-select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.timezone-select {
+    min-width: 200px;
+}
+
+.settings-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.save-button,
+.test-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-button {
+    background: #4CAF50;
+    color: white;
+}
+
+.save-button:hover:not(:disabled) {
+    background: #45a049;
+}
+
+.save-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.test-button {
+    background: #2196F3;
+    color: white;
+}
+
+.test-button:hover {
+    background: #1976D2;
+}
+
+.notification-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .notification-settings {
+        padding: 15px;
+    }
+    
+    .settings-actions {
+        flex-direction: column;
+    }
+    
+    .time-label,
+    .timezone-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

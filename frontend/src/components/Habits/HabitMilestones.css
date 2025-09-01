@@ -1,0 +1,260 @@
+.habit-milestones {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.milestones-header h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.next-milestone {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.next-milestone h4 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+}
+
+.milestone-progress {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.milestone-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.milestone-icon {
+    font-size: 2rem;
+}
+
+.milestone-details {
+    flex: 1;
+}
+
+.milestone-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.milestone-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.milestone-reward {
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.progress-info {
+    text-align: center;
+    min-width: 120px;
+}
+
+.days-remaining {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    height: 8px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #28a745;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.achieved-milestones h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.milestones-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.milestone-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.milestone-card.achieved {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-color: #28a745;
+}
+
+.milestone-icon-large {
+    font-size: 2.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.milestone-content {
+    flex: 1;
+}
+
+.milestone-content .milestone-name {
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.milestone-content .milestone-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.milestone-meta {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.milestone-xp {
+    background: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.milestone-date {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.no-milestones {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.no-milestones p {
+    margin: 10px 0;
+}
+
+.milestones-loading,
+.milestones-error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.milestones-error {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .habit-milestones {
+        padding: 15px;
+    }
+    
+    .stats-overview {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .milestone-progress {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .milestone-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .milestone-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .milestone-meta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
